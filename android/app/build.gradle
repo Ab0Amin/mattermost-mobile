@@ -104,7 +104,7 @@ android {
     ndkVersion rootProject.ext.ndkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdkVersion rootProject.ext.compileSdkVersion
-    namespace "com.mattermost.rnbeta"
+    namespace "com.kafaat.chat"
 
     lintOptions {
         checkReleaseBuilds false
@@ -112,7 +112,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.mattermost.rnbeta"
+        applicationId "com.kafaat.chat"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 689
@@ -123,11 +123,11 @@ android {
 
     signingConfigs {
         release {
-            if (project.hasProperty('MATTERMOST_RELEASE_STORE_FILE')) {
-                storeFile file(MATTERMOST_RELEASE_STORE_FILE)
-                storePassword MATTERMOST_RELEASE_PASSWORD
-                keyAlias MATTERMOST_RELEASE_KEY_ALIAS
-                keyPassword MATTERMOST_RELEASE_PASSWORD
+            if (project.hasProperty('KAFAAT_RELEASE_STORE_FILE')) {
+                storeFile file(KAFAAT_RELEASE_STORE_FILE)
+                storePassword KAFAAT_RELEASE_PASSWORD
+                keyAlias KAFAAT_RELEASE_KEY_ALIAS
+                keyPassword KAFAAT_RELEASE_PASSWORD
             }
         }
         debug {
@@ -146,7 +146,7 @@ android {
         }
     }
     buildTypes {
-        def useReleaseKey = project.hasProperty('MATTERMOST_RELEASE_STORE_FILE')
+        def useReleaseKey = project.hasProperty('KAFAAT_RELEASE_STORE_FILE')
         release {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"

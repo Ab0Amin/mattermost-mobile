@@ -33,7 +33,7 @@ import TosPrivacyContainer from './tos_privacy';
 
 import type {AvailableScreens} from '@typings/screens/navigation';
 
-const MATTERMOST_BUNDLE_IDS = ['com.mattermost.rnbeta', 'com.mattermost.rn'];
+const MATTERMOST_BUNDLE_IDS = ['com.kafaat.chat', 'com.mattermost.rnbeta', 'com.mattermost.rn'];
 
 const getStyleSheet = makeStyleSheetFromTheme((theme) => {
     return {
@@ -208,7 +208,7 @@ const About = ({componentId, config, license}: AboutProps) => {
             <View style={styles.logoContainer}>
                 <CompassIcon
                     color={theme.centerChannelColor}
-                    name='mattermost'
+                    name='message-text'
                     size={88}
                     testID='about.logo'
                 />
@@ -335,7 +335,7 @@ const About = ({componentId, config, license}: AboutProps) => {
                     style={styles.thinLine}
                 />
                 <FormattedText
-                    defaultMessage='Copyright 2015-{currentYear} Mattermost, Inc. All rights reserved'
+                    defaultMessage='Copyright 2024-{currentYear} Kafaat. All rights reserved'
                     id={'settings.about.copyright'}
                     style={[styles.footerText, styles.copyrightText]}
                     testID='about.copyright'
@@ -351,26 +351,8 @@ const About = ({componentId, config, license}: AboutProps) => {
                 <View style={styles.noticeContainer}>
                     <FormattedText
                         id={'settings.notice_text'}
-                        defaultMessage='Mattermost is made possible by the open source software used in our {platform} and {mobile}.'
+                        defaultMessage='Kafaat Chat - Secure team communication platform.'
                         style={styles.footerText}
-                        values={{
-                            platform: (
-                                <FormattedText
-                                    defaultMessage='server'
-                                    id={'settings.notice_platform_link'}
-                                    onPress={handlePlatformNotice}
-                                    style={styles.noticeLink}
-                                />
-                            ),
-                            mobile: (
-                                <FormattedText
-                                    defaultMessage='mobile apps'
-                                    id={'settings.notice_mobile_link'}
-                                    onPress={handleMobileNotice}
-                                    style={[styles.noticeLink, {marginLeft: 5}]}
-                                />
-                            ),
-                        }}
                         testID='about.notice_text'
                     />
                 </View>

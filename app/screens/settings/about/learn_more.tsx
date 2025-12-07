@@ -37,11 +37,11 @@ type LearnMoreProps = {
 const messages = defineMessages({
     teamEditionLearn: {
         id: 'about.teamEditionLearn',
-        defaultMessage: 'Join the Mattermost community at',
+        defaultMessage: 'Visit Kafaat at',
     },
     enterpriseEditionLearn: {
         id: 'about.enterpriseEditionLearn',
-        defaultMessage: 'Learn more about Enterprise Edition at ',
+        defaultMessage: 'Visit Kafaat at ',
     },
 });
 
